@@ -10,6 +10,7 @@ import { styles } from '../lib/styles'
 
 export const ContatoScreen = () => {
   const [text, setText] = useState('')
+  const [senha, setSenha] = useState('')
   const [value, setValue] = useState('left')
   const [checked, setChecked] = useState('first')
   const [searchQuery, setSearchQuery] = useState('')
@@ -40,6 +41,12 @@ export const ContatoScreen = () => {
         label="Email"
         value={text}
         onChangeText={(text) => setText(text)}
+      />
+
+      <TextInput
+        label="Senha"
+        value={senha}
+        onChangeText={(senha) => setSenha(senha)}
       />
 
       <ToggleButton.Row
