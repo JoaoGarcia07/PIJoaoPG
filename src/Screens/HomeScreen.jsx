@@ -1,12 +1,25 @@
-import { Button, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+import { Button } from 'react-native-paper'
 import { styles } from '../lib/styles'
 
 export const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>Oi eu sou Home Screen</Text>
-      <Button title="Ir para Sobre" onPress={() => navigation.navigate('Sobre')} />
-      <Button title="Ir para Contato" onPress={() => navigation.navigate('Contato')} />
+      <Text style={styles.titulo}>Oi eu sou Home Screen!</Text>
+      <Button
+        style={{ width: '40%', marginBottom: '10px' }}
+        mode="contained"
+        onPress={() => navigation.navigate('Sobre')}
+      >
+        SOBRE
+      </Button>
+      <Button
+        style={{ width: '40%', marginBottom: '10px' }}
+        mode="contained"
+        onPress={() => navigation.navigate('Contato')}
+      >
+        CONTATO
+      </Button>
     </View>
   )
 }
